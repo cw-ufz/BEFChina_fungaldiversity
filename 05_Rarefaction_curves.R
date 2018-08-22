@@ -1,15 +1,16 @@
 ############################### Rarefaction curves ############################
 
-# R script (05/13) for analyses in Weissbecker et al. 2018 New Phytologist
-# version: April 2018
+# R script (05/13) for analyses in Weissbecker et al. 2018
+# version: August 2018
 
 ###############################
 
 library(extrafont)  # extrafont_0.17    #make available font "Arial"
-library(vegan)      # vegan_2.4-4 
+library(vegan)      # vegan_2.5-2 
 #font_import()      # install fonts if neccessary
 #fonts()
-#R version 3.4.2 (2017-09-28)
+#sessionInfo()
+#R version 3.5.1 (2018-07-02)
 #######################
 
 BEF_Sapro<-readRDS(file="./Cleaned_Data/02_BEF_dom_Sapro_min_250.RDS")

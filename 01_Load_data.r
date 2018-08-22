@@ -1,17 +1,18 @@
 ############################### Load data #####################################
 
-# R script (01/13) for analyses in Weissbecker et al. 2018 New Phytologist
-# version: April 2018
+# R script (01/13) for analyses in Weissbecker et al. 2018 
+# version: August 2018
 
 #########################
 
-library(phyloseq)         #phyloseq_1.20.0        #merge otu,tax,metadata info
-library(vegan)            #vegan_2.4-4            #diversity calculations
-library(data.table)       #data.table_1.10.4-1    #dcast function
-library(biomformat)       #biomformat_1.4.0       #read biom file
-#R version 3.4.2 (2017-09-28)
+library(phyloseq)         #phyloseq_1.24.0      #merge otu,tax,metadata info
+library(vegan)            #vegan_2.5-2          #diversity calculations
+library(data.table)       #data.table_1.11.4    #dcast function
+library(biomformat)       #biomformat_1.8.0     #read biom file
+#sessionInfo()
+#R version 3.5.1 (2018-07-02)
 #Platform: x86_64-w64-mingw32/x64 (64-bit)
-#Running under: Windows 7 x64 (build 7601) Service Pack 1
+#Running under: Windows >= 8 x64 (build 9200)
 
 ######################### install biomformat package
 # source("https://bioconductor.org/biocLite.R")

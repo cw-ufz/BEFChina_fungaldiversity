@@ -1,7 +1,7 @@
 ## Calculate all possible combinations of variables for best subset approach ##
 
 # R function to script (11/13) for analyses in Weissbecker et al. 2017
-# version: April 2018
+# version: August 2018
 
 # The function needs a list with variables as argument
 # Example: vector<-list("A", "B", "C"); mrm.subset.list(vector)

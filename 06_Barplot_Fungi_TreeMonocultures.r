@@ -1,21 +1,22 @@
 ############# Barplots fungal functional groups in monocultures ###############
 
-# R script (06/13) for analyses in Weissbecker et al. 2018 New Phytologist
-# version: April 2018
+# R script (06/13) for analyses in Weissbecker et al. 2018
+# version: August 2018
 
 ###############################
 
-library(biomformat) # biomformat_1.4.0
-library(phyloseq)   # phyloseq_1.20.0
-library(dplyr)      # dplyr_0.7.4
-library(ggplot2)    # ggplot2_2.2.1
+library(biomformat) # biomformat_1.8.0
+library(phyloseq)   # phyloseq_1.24.0 
+library(dplyr)      # dplyr_0.7.6
+library(ggplot2)    # ggplot2_3.0.0
 library(extrafont)  # extrafont_0.17
   #font_import()
   #fonts()
 library(scales)     # scales_0.5.0
-library(reshape)    #
+library(reshape)    # reshape2_1.4.3
 require(grid)       
-#R version 3.4.2 (2017-09-28)
+#sessionInfo()
+#R version 3.5.1 (2018-07-02)
 ################################
 
 x = read_biom("./Data/BEF_vipA_454_ITS_1283866816.json_Nov2017.biom") 

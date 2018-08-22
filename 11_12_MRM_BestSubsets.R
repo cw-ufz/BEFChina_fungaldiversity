@@ -1,15 +1,16 @@
 #### Best Subset Model selection: Multiple regression of distance matrices ####
 
 # R script (11_12/13) for analyses in Weissbecker et al. 2018
-# version: April 2018
+# version: August 2018
 
 # actual MRM calculation done on a more powerful computer (cluster computer) 
 ################################
 
 library(dplyr)      #dplyr_0.7.4
 library(ecodist)    #ecodist_2.0.1 
-library(vegan)      #vegan_2.4-4  
-#R version 3.4.2 (2017-09-28)
+library(vegan)      #vegan_2.5-2 
+#sessionInfo()
+#R version 3.5.1 (2018-07-02)
 ###############################
 
 source(file="./R_functions/11_MRM_subset_combinations_NP.R")

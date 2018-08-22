@@ -1,26 +1,27 @@
 ############################## Variance partitioning ##########################
 
 # R script (13/13) for analyses in Weissbecker et al. 2018
-# version: April 2018
+# version: August 2018
 
 # variation partitioning alpha diversity  
 # lmer model --> rand() + VarCorr for random factor contribution, 
 # hier.part for fixed factor contribution, Procedure descibed in:
 # https://benwhalley.github.io/just-enough-r/icc-and-vpc.html
 #################
-library(vegan)      #vegan_2.4-4    #variance partitioning distance class data
-library(lme4)       #lme4_1.1-14    #lmer, VarCorr
+library(vegan)      #vegan_2.5-2    #variance partitioning distance class data
+library(lme4)       #lme4_1.1-17   #lmer, VarCorr
 library(hier.part)  #hier.part_1.0-4#variance partitioning linear regressions
-library(dplyr)      #dplyr_0.7.4    #can handle %>%, mutate
-library(lmerTest)   #lmerTest_2.0-36#
-library(MuMIn)      #MuMIn_1.40.4   #provides R^2 for lmer models
-library(ggplot2)    #ggplot2_2.2.1
+library(dplyr)      #dplyr_0.7.6     #can handle %>%, mutate
+library(lmerTest)   #lmerTest_3.0-1#
+library(MuMIn)      #MuMIn_1.42.1  #provides R^2 for lmer models
+library(ggplot2)    #ggplot2_3.0.0
 library(extrafont)  #extrafont_0.17
 #font_import()
 #fonts()
 library(scales)     #scales_0.5.0
 require(grid)     
-#R version 3.4.2 (2017-09-28)
+#sessionInfo()
+#R version 3.5.1 (2018-07-02)
 #################
 
 alpha_model_variances <- data.frame(frac=rep(c("location", "Plot","shared","soil",

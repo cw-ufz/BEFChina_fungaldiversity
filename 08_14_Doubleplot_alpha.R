@@ -1,19 +1,20 @@
 ############################### Fungal alpha diversity plots ##################
 
-# R script (08/13) for analyses in Weissbecker et al. 2018 New Phytologist
-# version: April 2018
+# R script (08/13) for analyses in Weissbecker et al. 2018
+# version: August 2018
 
 #########################
 
 library("extrafont")#extrafont_0.17
 library("gdata")    #gdata_2.18.0
-library("vegan")    #vegan_2.4-4
+library("vegan")    #vegan_2.5-2
 library("ecodist")  #ecodist_2.0.1
 library(grid)       #
 library(gridExtra)  #gridExtra_2.3
 #font_import()
 #fonts()
-#R version 3.4.2 (2017-09-28)
+#sessionInfo()
+#R version 3.5.1 (2018-07-02)
 ########################
 
 Sapro_rich_residuals<-readRDS(file="./output/07_Sapro_richness_avreps_residuals.RDS")
@@ -25,6 +26,12 @@ Sapro_metadata<-readRDS(file="./output/07_Sapro_alpha_avreps_metadata.RDS")
 EcM_metadata<-readRDS(file="./output/07_EcM_alpha_avreps_metadata.RDS")
 Patho_metadata<-readRDS(file="./output/07_Patho_alpha_avreps_metadata.RDS")
 AM_metadata<-readRDS(file="./output/07_AM_alpha_avreps_metadata.RDS")
+
+plot(AM_rich_residuals ~  AM_metadata$Plot_factor, ylab="Richness residuals",
+     xlab="Forest plot", main="AM fungi")
+
+plot(AM_rich_residuals ~  AM_metadata$Env_var$KAK.eff, ylab="Richness residuals",
+     xlab="CEC", main="AM fungi")
 
 
 ### Quick lm Anova tests

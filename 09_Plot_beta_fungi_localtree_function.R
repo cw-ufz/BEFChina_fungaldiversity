@@ -1,13 +1,14 @@
 ############################### Calculate beta diversity for datasets #########
 
 # R function to script 
-# R script (09/13) for analyses in Weissbecker et al. 2018 New Phytologist
-# version: April 2018
+# R script (09/13) for analyses in Weissbecker et al. 2018
+# version: August 2018
 
 ######################
-library(vegan)      #vegan_2.4-4
+library(vegan)      #vegan_2.5-2
 library(gdata)      #gdata_2.18.0
-#R version 3.4.2 (2017-09-28)
+#sessionInfo()
+#R version 3.5.1 (2018-07-02)
 ######################
 
 # The function needs three arguments:

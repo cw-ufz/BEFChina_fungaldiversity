@@ -2,12 +2,14 @@
 
 # R script to be run on cluster computer needed for 
 # R script (12/13) for analyses in Weissbecker et al. 2018
-# version: April 2018
+# version: August 2018
 
 #######################
 
 library(parallel)
 library("ecodist", lib.loc = "/gpfs0/home/lachmann/R/x86_64-pc-linux-gnu-library/3.4/")
+#sessionInfo()
+#R version 3.5.1 (2018-07-02)
 ##########
 
 cl <- makeForkCluster(outfile = "")

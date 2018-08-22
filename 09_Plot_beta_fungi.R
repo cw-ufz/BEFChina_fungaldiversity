@@ -1,19 +1,20 @@
 ############################### Plot fungal vs. tree beta-diversity ###########
 
-# R script (09/13) for analyses in Weissbecker et al. 2018 New Phytologist
-# version: April 2018
+# R script (09/13) for analyses in Weissbecker et al. 2018
+# version: August 2018
 
 #########################
 
 library("extrafont")  #extrafont_0.17
 library("gdata")      #gdata_2.18.0
-library("vegan")      #vegan_2.4-4
+library("vegan")      #vegan_2.5-2
 library("ecodist")    #ecodist_2.0.1
-library("ggplot2")    #ggplot2_2.2.1
+library("ggplot2")    #ggplot2_3.0.0
 library("Rmisc")      #Rmisc_1.5
   #font_import()
   #fonts()
-#R version 3.4.2 (2017-09-28)
+#sessionInfo()
+#R version 3.5.1 (2018-07-02)
 ########################
 
 source(file="./R_functions/09_Plot_beta_fungi_localtree_function.R")

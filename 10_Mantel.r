@@ -1,7 +1,7 @@
 ################################# Mantel test for distance matrices ###########
 
 # R script (10/13) for analyses in Weissbecker et al. 2017
-# version: April 2018
+# version: August 2018
 
 ####################################
 library(ecodist)  #ecodist_2.0.1  #Mantel and partial Mantel tests
@@ -9,7 +9,8 @@ library(vegan)    #vegan_2.4-4    #calculate distance matrices with vegdist
 library(gdata)    #gdata_2.18.0   #extracting lower triangular matrix
 library(sp)       #sp_1.2-5       #calculation geographic distances (km) 
                                   #from latitude and logitude point information
-#R version 3.4.2 (2017-09-28)
+#sessionInfo()
+#R version 3.5.1 (2018-07-02)
 ####################################
 
 source(file="./R_functions/09_Plot_beta_fungi_localtree_function.R")
@@ -114,6 +115,8 @@ for (cols in 1:21){
  colnames(mantel_conv_results)[(2*pos)]<-"p"
 }
 
+mantel_partial_results<-mantel_conv_results
+MRM_single_results<-mantel_conv_results
 #############################
 
 # Mantel and partial Mantel tests

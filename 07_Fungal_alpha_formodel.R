@@ -1,18 +1,19 @@
 ############################### Fungal alpha diversity analysis ###############
 
-# R script (07/13) for analyses in Weissbecker et al. 2018 New Phytologist
-# version: April 2018
+# R script (07/13) for analyses in Weissbecker et al. 2018
+# version: August 2018
 
 ###############################
-library(vegan)      #vegan_2.4-4
-library(sp)         #sp_1.2-5            #spDists function
-library(car)        #car_2.1-5           #Anova
-library(lme4)       #lme4_1.1-14         #lmer
-library(nlme)       #nlme_3.1-131        #lme
-library(MuMIn)      #MuMIn_1.40.4        #corr.AIC, provides R^2 for lmer models
-library(data.table) #data.table_1.10.4-1 #merge list to dataframe
-library(dplyr)      #dplyr_0.7.4         
-#R version 3.4.2
+library(vegan)      #vegan_2.5-2 
+library(sp)         #sp_1.3-1            #spDists function
+library(car)        #car_3.0-0           #Anova
+library(lme4)       #lme4_1.1-17         #lmer
+library(nlme)       #nlme_3.1-137        #lme
+library(MuMIn)      #MuMIn_1.42.1        #corr.AIC, provides R^2 for lmer models
+library(data.table) #data.table_1.11.4   #merge list to dataframe
+library(dplyr)      #dplyr_0.7.6        
+#sessionInfo()
+#R version 3.5.1 (2018-07-02)
 ################
 
 ### Warning message in forward slection procedure: 

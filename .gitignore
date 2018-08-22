@@ -1,0 +1,12 @@
+/*.gz
+/*.Rhistory
+/output
+/Data/*.Rhistory
+/repo_csv
+/BEF_vipA_ITS.data_package_pre
+.Rproj.user/*.Rhistory
+/obsolete/*.Rhistory
+/obsolete_output
+/obsolete
+
+.Rproj.user

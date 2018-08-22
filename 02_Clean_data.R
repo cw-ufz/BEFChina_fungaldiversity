@@ -1,12 +1,14 @@
 ############################### Clean data ####################################
 
-# R script (02/13) for analyses in Weissbecker et al. 2018 New Phytologist
-# version: April 2018
+# R script (02/13) for analyses in Weissbecker et al. 2018
+# version: August 2018
 
 ###############################
 
-library(vegan)  # vegan_2.4-4 #decostand function
-#R version 3.4.2 (2017-09-28)
+library(vegan)  # vegan_2.5-2 #decostand function
+library(plyr)   # plyr_1.8.4  #
+#sessionInfo()
+#R version 3.5.1 (2018-07-02)
 ###############################
 
 BEF_dom<-readRDS(file="./Cleaned_Data/01_dominant_phyloseq.RDS")
@@ -70,6 +72,59 @@ Sapro_var<-lapply(all_var_sorted, function(x) x[rownames(x) %in% rownames(sample
 EcM_var<-lapply(all_var_sorted, function(x) x[rownames(x) %in% rownames(sample_data(BEF_EcM)),])
 Patho_var<-lapply(all_var_sorted, function(x) x[rownames(x) %in% rownames(sample_data(BEF_Patho)),])
 AM_var<-lapply(all_var_sorted, function(x) x[rownames(x) %in% rownames(sample_data(BEF_AM)),])
+
+
+
+#----- sample number check
+
+Dataset<-AM_var
+Dataname<-"AM fungi"
+
+condense_trees<-apply(Dataset$Sample_tree,MARGIN= 1, function(x)  {x[1]<-colnames(Dataset$Sample_tree)[which(x==1)]})
+
+condense_samples<-cbind(as.character(Dataset$Env_var$Plot), condense_trees)
+colnames(condense_samples)<-c("Plot", "Trees")
+
+fungal_sample_check<-count(data.frame(condense_samples), vars = c("Plot","Trees"))
+
+histogram(fungal_sample_check$freq, main=Dataname,
+          xlab="Number of replicates statistic unit is based on",
+          ylab="Percentage")   
+
+precalc<-count(fungal_sample_check, vars="freq")
+unit_replicates<-apply(precalc, MARGIN=1, function(x) {x[2]/x[1]})
+unit_replicates<-cbind(precalc[1],unit_replicates)
+
+#Sapros:
+#   freq      unit_replicates
+#1    2               2
+#2    3              10
+#3    4              15
+#4    5              53
+
+#Pathogenic fungi
+#   freq      unit_replicates
+#1    1              15
+#2    2              17
+#3    3              18
+#4    4              11
+#5    5               6
+
+#Ecto
+#   freq      unit_replicates
+#1    1              17
+#2    2               6
+#3    3               6
+#4    4              14
+#5    5              17
+
+#AM
+#   freq      unit_replicates
+#1    1              13
+#2    2              16
+#3    3              15
+#4    4              11
+#5    5              16
 
 
 ############## script output

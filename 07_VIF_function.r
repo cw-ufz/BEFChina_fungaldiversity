@@ -1,16 +1,17 @@
 ########################## Variance inflation factor stepwise calculation #####
 
 # R function for
-# R script (07/13) for analyses in Weissbecker et al. 2018 New Phytologist
-# version: April 2018
+# R script (07/13) for analyses in Weissbecker et al. 2018
+# version: August 2018
 
 #author was an anonymous author in one of the r forums:
 #https://beckmw.wordpress.com/2013/02/05/collinearity-and-stepwise-vif-selection/
 
 ###############################
 
-library(fmsb)  #fmsb_0.6.1
-#R version 3.4.2 (2017-09-28)
+library(fmsb)  #fmsb_0.6.3
+#sessionInfo()
+#R version 3.5.1 (2018-07-02)
 ###############################
 
 vif_func<-function(in_frame,thresh=10,trace=T,...){

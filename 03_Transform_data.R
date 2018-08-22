@@ -1,11 +1,12 @@
 ############################### Transform data ################################
 
-# R script (03/13) for analyses in Weissbecker et al. 2018 New Phytologist
-# version: April 2018
+# R script (03/13) for analyses in Weissbecker et al. 2018
+# version: August 2018
 
 ###############################
-library(dplyr)      # dplyr_0.7.4   #data transformation
-#R version 3.4.2 (2017-09-28)
+library(dplyr)      # dplyr_0.7.6   #data transformation
+#sessionInfo()
+#R version 3.5.1 (2018-07-02)
 ################
 
 BEF_Sapro<-readRDS(file="./Cleaned_Data/02_BEF_dom_Sapro_min_250.RDS")

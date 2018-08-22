@@ -1,13 +1,14 @@
 ####### Procrustes correlation between complete and dominant OTU dataset #######
 
-# R script (04/13) for analyses in Weissbecker et al. 2018 New Phytologist
-# version: April 2018
+# R script (04/13) for analyses in Weissbecker et al. 2018
+# version: August 2018
 
 ######################
-library(vegan)            #vegan_2.4-4
-library(biomformat)       #biomformat_1.4.0 #read biom file
-library(phyloseq)         #phyloseq_1.20.0  
-#R version 3.4.2 (2017-09-28)
+library(vegan)            #vegan_2.5-2
+library(biomformat)       #biomformat_1.8.0 #read biom file
+library(phyloseq)         #phyloseq_1.24.0 
+#sessionInfo()
+#R version 3.5.1 (2018-07-02)
 ######################
 
 x = read_biom("./Data/BEF_vipA_454_ITS_1283866816.json_Nov2017.biom")
