@@ -10,6 +10,7 @@ Christina Weißbecker1,2*, Tesfaye Wubet1,3*, Guillaume Lentendu4, Peter Kühn5,
 6Martin Luther University Halle-Wittenberg, Institute of Biology / Geobotany and Botanical Garden, Am Kirchtor 1, 06108 Halle (Saale), Germany
 
 Author for correspondence: Christina Weißbecker, Email: christina.weissbecker@ufz.de
+ORCID iD: https://orcid.org/0000-0002-8212-6170
 
 Abstract
 Deconvoluting relative contributions of specific biotic and abiotic drivers on soil fungal community compositions facilitates predictions about 
@@ -63,7 +64,7 @@ There are submitted a total of 13 numbered analysis scripts and 3 associated R f
 
 5) Publication
 
-Publication can be found here: 
+Publication can be found here: https://doi.org/10.3389/fmicb.2018.02312
 
 
 
